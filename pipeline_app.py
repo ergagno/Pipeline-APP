@@ -110,9 +110,6 @@ def main():
 
     try:
         df = pd.read_excel("20-inch EL100 Pipetally.xlsx", engine='openpyxl')
-        # Convert Peak Depth from feet to inches if needed (assuming it's in feet based on your data)
-        df['Peak Depth'] = df['Peak Depth'] * 12  # Convert feet to inches
-        
         filtered_df = df[df['Feature Type'].isin(feature_types)]
         
         col1, col2 = st.columns([2, 1])
